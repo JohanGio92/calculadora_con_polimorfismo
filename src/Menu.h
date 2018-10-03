@@ -1,17 +1,22 @@
-/*
- * Menu.h
- *
- *  Created on: Oct 3, 2018
- *      Author: johan
- */
-
 #ifndef MENU_H_
 #define MENU_H_
 
+#include "Sumatoria.h"
+#include "Subtraccion.h"
+#include "Multiplicacion.h"
+#include "Division.h"
+
 class Menu {
+private:
+	static const int LONGITUD;
+	Opcion** opciones;
+	Sumatoria* getSumatoria();
+	Subtraccion* getSubtraccion();
+	Multiplicacion* getMultiplicacion();
+	Division* getDivision();
 public:
 	Menu();
 	virtual ~Menu();
 };
 
-#endif /* MENU_H_ */
+#endif
