@@ -1,7 +1,9 @@
 #include <iostream>
+#include "Calculadora.h"
 using namespace std;
 
 int main() {
-	cout << "" << endl; // prints 
+	Calculadora Calculadora;
+	cout << "" << endl;
 	return 0;
 }

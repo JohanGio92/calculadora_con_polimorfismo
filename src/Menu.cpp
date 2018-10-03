@@ -26,6 +26,12 @@ Division* Menu::getDivision() {
 	return new Division();
 }
 
+void Menu::mostrar() {
+	for (int i = 0; i < LONGITUD; ++i) {
+		opciones[i]->mostrar(i + 1);
+	}
+}
+
 Menu::~Menu() {
 }
 

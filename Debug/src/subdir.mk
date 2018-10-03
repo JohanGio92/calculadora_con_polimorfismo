@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/Calculadora.cpp \
 ../src/Consola.cpp \
 ../src/Division.cpp \
 ../src/Menu.cpp \
@@ -14,6 +15,7 @@ CPP_SRCS += \
 ../src/calculadora_con_polimorfismo.cpp 
 
 OBJS += \
+./src/Calculadora.o \
 ./src/Consola.o \
 ./src/Division.o \
 ./src/Menu.o \
@@ -24,6 +26,7 @@ OBJS += \
 ./src/calculadora_con_polimorfismo.o 
 
 CPP_DEPS += \
+./src/Calculadora.d \
 ./src/Consola.d \
 ./src/Division.d \
 ./src/Menu.d \

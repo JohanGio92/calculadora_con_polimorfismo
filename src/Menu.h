@@ -16,6 +16,7 @@ private:
 	Division* getDivision();
 public:
 	Menu();
+	void mostrar();
 	virtual ~Menu();
 };
 

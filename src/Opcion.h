@@ -15,6 +15,7 @@ public:
 	Opcion();
 	virtual Entero ejecutar() = 0;
 	virtual void readOperandos();
+	virtual void mostrar(int posicion);
 	virtual ~Opcion();
 };
 
