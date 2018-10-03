@@ -1,7 +1,7 @@
 #ifndef OPCION_H_
 #define OPCION_H_
-#include <string>
-#include <iostream>
+
+#include "Consola.h"
 
 typedef int Entero;
 
@@ -11,9 +11,9 @@ private:
 	Entero unNumero;
 	Entero otroNumero;
 public:
-	Opcion();
+	Opcion(std::string titulo);
 	virtual Entero ejecutar() = 0;
-
+	virtual void readOperandos();
 	virtual ~Opcion();
 };
 

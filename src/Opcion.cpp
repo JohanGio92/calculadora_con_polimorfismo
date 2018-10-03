@@ -1,15 +1,14 @@
-/*
- * Opcion.cpp
- *
- *  Created on: Oct 3, 2018
- *      Author: johan
- */
-
 #include "Opcion.h"
 
-Opcion::Opcion() {
+Opcion::Opcion(std::string titulo) :
+		titulo(titulo), unNumero(0), otroNumero(0) {
 }
 
 Opcion::~Opcion() {
 }
 
+void Opcion::readOperandos() {
+	Consola consola;
+	unNumero =  consola.leerEntero("Por favor Ingresa un Numero: ");
+	otroNumero = consola.leerEntero("Por favor ingresa otro numero: ");
+}
