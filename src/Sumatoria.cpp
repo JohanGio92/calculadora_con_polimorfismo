@@ -1,6 +1,10 @@
 #include "Sumatoria.h"
 
-Sumatoria::Sumatoria() {
+Sumatoria::Sumatoria() : Opcion("- Sumar."){
+}
+
+Entero Sumatoria::ejecutar() {
+	return Opcion::unNumero + Opcion::otroNumero;
 }
 
 Sumatoria::~Sumatoria() {

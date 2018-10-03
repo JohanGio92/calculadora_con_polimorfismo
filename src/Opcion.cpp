@@ -4,8 +4,12 @@ Opcion::Opcion(std::string titulo) :
 		titulo(titulo), unNumero(0), otroNumero(0) {
 }
 
+Opcion::Opcion() : Opcion("") {
+}
+
 Opcion::~Opcion() {
 }
+
 
 void Opcion::readOperandos() {
 	Consola consola;
