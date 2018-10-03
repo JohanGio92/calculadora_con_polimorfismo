@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : calculadora_con_polimorfismo.cpp
-// Author      : 
-// Version     :
-// Copyright   : 
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 using namespace std;
 
