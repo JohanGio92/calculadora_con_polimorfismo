@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../src/Consola.cpp \
 ../src/Opcion.cpp \
+../src/Sumatoria.cpp \
 ../src/calculadora_con_polimorfismo.cpp 
 
 OBJS += \
 ./src/Consola.o \
 ./src/Opcion.o \
+./src/Sumatoria.o \
 ./src/calculadora_con_polimorfismo.o 
 
 CPP_DEPS += \
 ./src/Consola.d \
 ./src/Opcion.d \
+./src/Sumatoria.d \
 ./src/calculadora_con_polimorfismo.d 
 
 
