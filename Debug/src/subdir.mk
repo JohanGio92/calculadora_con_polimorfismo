@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/Consola.cpp \
+../src/Multiplicacion.cpp \
 ../src/Opcion.cpp \
 ../src/Subtraccion.cpp \
 ../src/Sumatoria.cpp \
@@ -12,6 +13,7 @@ CPP_SRCS += \
 
 OBJS += \
 ./src/Consola.o \
+./src/Multiplicacion.o \
 ./src/Opcion.o \
 ./src/Subtraccion.o \
 ./src/Sumatoria.o \
@@ -19,6 +21,7 @@ OBJS += \
 
 CPP_DEPS += \
 ./src/Consola.d \
+./src/Multiplicacion.d \
 ./src/Opcion.d \
 ./src/Subtraccion.d \
 ./src/Sumatoria.d \
