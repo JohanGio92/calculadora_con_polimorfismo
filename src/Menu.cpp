@@ -33,5 +33,9 @@ void Menu::mostrar() {
 }
 
 Menu::~Menu() {
+	for (int i = 0; i < LONGITUD; ++i) {
+		delete opciones[i];
+	}
+	delete[] opciones;
 }
 
