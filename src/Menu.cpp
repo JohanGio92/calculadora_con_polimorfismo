@@ -26,20 +26,24 @@ Division* Menu::getDivision() {
 	return new Division();
 }
 
-void Menu::mostrar() {
+void Menu::mostrarTitulos() {
 	for (int i = 0; i < LONGITUD; i++) {
-		opciones[i]->mostrar(i + 1);
+		opciones[i]->mostrarTitulo(i + 1);
 	}
 }
 
-Opcion* Menu::getOpcion() {
+Opcion* Menu::getOpcion(Entero posicion) {
+	return opciones[posicion];
+}
+
+Entero Menu::leerPosicion() {
 	Consola consola;
-	int opcion;
-	do{
+	int posicion;
+	do {
 		std::string maximo = consola.toString(LONGITUD);
-		opcion = consola.leerEntero("Cual opcion? [1," + maximo + "]");
-	}while( 1 > opcion || opcion > LONGITUD);
-	return opciones[opcion];
+		posicion = consola.leerEntero("Cual opcion? [1," + maximo + "]");
+	} while (1 > posicion || posicion > LONGITUD);
+	return posicion-1;
 }
 
 Menu::~Menu() {

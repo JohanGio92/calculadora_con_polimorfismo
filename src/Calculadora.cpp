@@ -7,9 +7,10 @@ Calculadora::Calculadora() {
 void Calculadora::encender() {
 	bool apagado = false;
 	while(!apagado){
-		menu->mostrar();
-		menu->getOpcion()->readOperandos();
-		menu->getOpcion()->ejecutar();
+		menu->mostrarTitulos();
+		int posicion = menu->leerPosicion();
+		menu->getOpcion(posicion)->leerOperandos();
+		menu->getOpcion(posicion)->mostrarResultado();
 		apagado = true;
 	}
 }

@@ -7,19 +7,20 @@ Opcion::Opcion(std::string titulo) :
 Opcion::Opcion() : Opcion("") {
 }
 
-void Opcion::readOperandos() {
-	Consola consola;
+void Opcion::leerOperandos() {
 	unNumero =  consola.leerEntero("Por favor Ingresa un Numero: ");
 	otroNumero = consola.leerEntero("Por favor ingresa otro numero: ");
 }
 
-void Opcion::mostrar(int posicion) {
-	Consola consola;
+void Opcion::mostrarTitulo(int posicion) {
 	consola.Escribir(consola.toString(posicion) + titulo);
+}
+
+void Opcion::mostrarResultado() {
+	int resultado = this->ejecutar();
+	consola.Escribir("El resultado es: " + consola.toString(resultado));
 }
 
 Opcion::~Opcion() {
 }
-
-
 

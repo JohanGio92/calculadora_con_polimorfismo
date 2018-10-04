@@ -10,12 +10,14 @@ protected:
 	std::string titulo;
 	Entero unNumero;
 	Entero otroNumero;
+	Consola consola;
 public:
 	Opcion(std::string titulo);
 	Opcion();
 	virtual Entero ejecutar() = 0;
-	virtual void readOperandos();
-	virtual void mostrar(int posicion);
+	virtual void leerOperandos();
+	virtual void mostrarTitulo(int posicion);
+	virtual void mostrarResultado();
 	virtual ~Opcion();
 };
 

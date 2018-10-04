@@ -16,8 +16,9 @@ private:
 	Division* getDivision();
 public:
 	Menu();
-	void mostrar();
-	Opcion* getOpcion();
+	void mostrarTitulos();
+	Opcion* getOpcion(Entero posicion);
+	Entero leerPosicion();
 	virtual ~Menu();
 };
 
