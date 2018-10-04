@@ -4,10 +4,10 @@ const int Menu::LONGITUD = 4;
 
 Menu::Menu() {
 	this->opciones = new Opcion*[LONGITUD];
-	opciones[1] = this->getSumatoria();
-	opciones[2] = this->getSubtraccion();
-	opciones[3] = this->getMultiplicacion();
-	opciones[4] = this->getDivision();
+	opciones[0] = this->getSumatoria();
+	opciones[1] = this->getSubtraccion();
+	opciones[2] = this->getMultiplicacion();
+	opciones[3] = this->getDivision();
 }
 
 Sumatoria* Menu::getSumatoria(){
@@ -27,9 +27,19 @@ Division* Menu::getDivision() {
 }
 
 void Menu::mostrar() {
-	for (int i = 0; i < LONGITUD; ++i) {
+	for (int i = 0; i < LONGITUD; i++) {
 		opciones[i]->mostrar(i + 1);
 	}
+}
+
+Opcion* Menu::getOpcion() {
+	Consola consola;
+	int opcion;
+	do{
+		std::string maximo = consola.toString(LONGITUD);
+		opcion = consola.leerEntero("Cual opcion? [1," + maximo + "]");
+	}while( 1 > opcion || opcion > LONGITUD);
+	return opciones[opcion];
 }
 
 Menu::~Menu() {

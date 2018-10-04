@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	Calculadora Calculadora;
-	cout << "" << endl;
+	Calculadora calculadora;
+	calculadora.encender();
 	return 0;
 }

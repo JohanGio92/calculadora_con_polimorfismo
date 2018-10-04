@@ -7,10 +7,6 @@ Opcion::Opcion(std::string titulo) :
 Opcion::Opcion() : Opcion("") {
 }
 
-Opcion::~Opcion() {
-}
-
-
 void Opcion::readOperandos() {
 	Consola consola;
 	unNumero =  consola.leerEntero("Por favor Ingresa un Numero: ");
@@ -21,3 +17,9 @@ void Opcion::mostrar(int posicion) {
 	Consola consola;
 	consola.Escribir(consola.toString(posicion) + titulo);
 }
+
+Opcion::~Opcion() {
+}
+
+
+

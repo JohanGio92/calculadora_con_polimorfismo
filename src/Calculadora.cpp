@@ -8,6 +8,9 @@ void Calculadora::encender() {
 	bool apagado = false;
 	while(!apagado){
 		menu->mostrar();
+		menu->getOpcion()->readOperandos();
+		menu->getOpcion()->ejecutar();
+		apagado = true;
 	}
 }
 

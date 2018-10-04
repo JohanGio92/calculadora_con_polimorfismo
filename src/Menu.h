@@ -17,6 +17,7 @@ private:
 public:
 	Menu();
 	void mostrar();
+	Opcion* getOpcion();
 	virtual ~Menu();
 };
 
