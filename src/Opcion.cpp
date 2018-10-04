@@ -16,11 +16,6 @@ void Opcion::mostrarTitulo(int posicion) {
 	consola.Escribir(consola.toString(posicion) + titulo);
 }
 
-void Opcion::mostrarResultado() {
-	int resultado = this->ejecutar();
-	consola.Escribir("El resultado es: " + consola.toString(resultado));
-}
-
 Opcion::~Opcion() {
 }
 

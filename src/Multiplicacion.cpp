@@ -3,8 +3,9 @@
 Multiplicacion::Multiplicacion() : Opcion("- Multiplicar."){
 }
 
-Entero Multiplicacion::ejecutar(){
-	return Opcion::unNumero * Opcion::otroNumero;
+void Multiplicacion::ejecutar(){
+	this->leerOperandos();
+	consola.Escribir("El resultado es " + consola.toString(unNumero * otroNumero));
 }
 
 Multiplicacion::~Multiplicacion() {

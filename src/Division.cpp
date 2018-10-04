@@ -3,9 +3,11 @@
 Division::Division() : Opcion("- Dividir."){
 }
 
-Entero Division::ejecutar(){
+void Division::ejecutar(){
+	this->leerOperandos();
 	assert(Opcion::otroNumero != 0);
-	return Opcion::unNumero / Opcion::otroNumero;
+	consola.Escribir(
+			"El resultado es " + consola.toString((double)unNumero / otroNumero));
 }
 
 Division::~Division() {

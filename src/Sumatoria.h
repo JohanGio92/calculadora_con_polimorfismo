@@ -6,7 +6,7 @@
 class Sumatoria : public Opcion {
 public:
 	Sumatoria();
-	virtual Entero ejecutar() override;
+	virtual void ejecutar() override;
 	virtual ~Sumatoria();
 };
 

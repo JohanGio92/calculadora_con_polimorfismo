@@ -7,7 +7,7 @@
 class Division : public Opcion{
 public:
 	Division();
-	virtual Entero ejecutar() override;
+	virtual void ejecutar() override;
 	virtual ~Division();
 };
 

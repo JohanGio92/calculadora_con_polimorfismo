@@ -6,7 +6,7 @@
 class Multiplicacion : public Opcion{
 public:
 	Multiplicacion();
-	virtual Entero ejecutar() override;
+	virtual void ejecutar() override;
 	virtual ~Multiplicacion();
 };
 

@@ -3,8 +3,9 @@
 Subtraccion::Subtraccion() : Opcion("- restar.") {
 }
 
-Entero Subtraccion::ejecutar() {
-	return Opcion::unNumero - Opcion::otroNumero;
+void Subtraccion::ejecutar() {
+	this->leerOperandos();
+	consola.Escribir("El resultado es " + consola.toString(unNumero - otroNumero));
 }
 
 Subtraccion::~Subtraccion() {

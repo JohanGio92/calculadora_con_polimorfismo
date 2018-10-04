@@ -5,20 +5,22 @@
 #include "Subtraccion.h"
 #include "Multiplicacion.h"
 #include "Division.h"
+#include "Salida.h"
 
 class Menu {
 private:
 	static const int LONGITUD;
+	Entero cantidad;
 	Opcion** opciones;
-	Sumatoria* getSumatoria();
-	Subtraccion* getSubtraccion();
-	Multiplicacion* getMultiplicacion();
-	Division* getDivision();
+	Salida* salida;
 public:
 	Menu();
 	void mostrarTitulos();
 	Opcion* getOpcion(Entero posicion);
 	Entero leerPosicion();
+	bool terminado();
+	void agnadir(Opcion* opcion);
+	void cerrar();
 	virtual ~Menu();
 };
 

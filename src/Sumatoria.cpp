@@ -3,8 +3,9 @@
 Sumatoria::Sumatoria() : Opcion("- Sumar."){
 }
 
-Entero Sumatoria::ejecutar() {
-	return Opcion::unNumero + Opcion::otroNumero;
+void Sumatoria::ejecutar() {
+	this->leerOperandos();
+	consola.Escribir("El resultado es " + consola.toString(unNumero + otroNumero));
 }
 
 Sumatoria::~Sumatoria() {

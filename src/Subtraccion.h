@@ -6,7 +6,7 @@
 class Subtraccion : public Opcion {
 public:
 	Subtraccion();
-	virtual Entero ejecutar() override;
+	virtual void ejecutar() override;
 	virtual ~Subtraccion();
 };
 

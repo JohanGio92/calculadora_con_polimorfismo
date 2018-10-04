@@ -10,6 +10,7 @@ CPP_SRCS += \
 ../src/Menu.cpp \
 ../src/Multiplicacion.cpp \
 ../src/Opcion.cpp \
+../src/Salida.cpp \
 ../src/Subtraccion.cpp \
 ../src/Sumatoria.cpp \
 ../src/calculadora_con_polimorfismo.cpp 
@@ -21,6 +22,7 @@ OBJS += \
 ./src/Menu.o \
 ./src/Multiplicacion.o \
 ./src/Opcion.o \
+./src/Salida.o \
 ./src/Subtraccion.o \
 ./src/Sumatoria.o \
 ./src/calculadora_con_polimorfismo.o 
@@ -32,6 +34,7 @@ CPP_DEPS += \
 ./src/Menu.d \
 ./src/Multiplicacion.d \
 ./src/Opcion.d \
+./src/Salida.d \
 ./src/Subtraccion.d \
 ./src/Sumatoria.d \
 ./src/calculadora_con_polimorfismo.d 

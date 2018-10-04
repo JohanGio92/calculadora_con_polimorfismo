@@ -14,10 +14,9 @@ protected:
 public:
 	Opcion(std::string titulo);
 	Opcion();
-	virtual Entero ejecutar() = 0;
+	virtual void ejecutar() = 0;
 	virtual void leerOperandos();
 	virtual void mostrarTitulo(int posicion);
-	virtual void mostrarResultado();
 	virtual ~Opcion();
 };
 

@@ -1,29 +1,13 @@
 #include "Menu.h"
 
-const int Menu::LONGITUD = 4;
+const int Menu::LONGITUD = 5;
 
-Menu::Menu() {
+Menu::Menu() : cantidad(0) {
 	this->opciones = new Opcion*[LONGITUD];
-	opciones[0] = this->getSumatoria();
-	opciones[1] = this->getSubtraccion();
-	opciones[2] = this->getMultiplicacion();
-	opciones[3] = this->getDivision();
-}
-
-Sumatoria* Menu::getSumatoria(){
-	return new Sumatoria();
-}
-
-Subtraccion* Menu::getSubtraccion() {
-	return new Subtraccion();
-}
-
-Multiplicacion* Menu::getMultiplicacion() {
-	return new Multiplicacion();
-}
-
-Division* Menu::getDivision() {
-	return new Division();
+	for (int i = 0; i < LONGITUD; ++i) {
+		opciones[i] = nullptr;
+	}
+	this->salida = nullptr;
 }
 
 void Menu::mostrarTitulos() {
@@ -34,6 +18,20 @@ void Menu::mostrarTitulos() {
 
 Opcion* Menu::getOpcion(Entero posicion) {
 	return opciones[posicion];
+}
+
+bool Menu::terminado() {
+	return salida->cerrar();
+}
+
+void Menu::agnadir(Opcion* opcion) {
+	this->opciones[cantidad] = opcion;
+	++cantidad;
+}
+
+void Menu::cerrar() {
+	salida = new Salida();
+	this->agnadir(salida);
 }
 
 Entero Menu::leerPosicion() {

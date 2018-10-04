@@ -2,16 +2,18 @@
 
 Calculadora::Calculadora() {
 	menu = new Menu();
+	menu->agnadir(new Sumatoria());
+	menu->agnadir(new Subtraccion());
+	menu->agnadir(new Multiplicacion());
+	menu->agnadir(new Division);
+	menu->cerrar();
 }
 
 void Calculadora::encender() {
-	bool apagado = false;
-	while(!apagado){
+	while(!menu->terminado()){
 		menu->mostrarTitulos();
-		int posicion = menu->leerPosicion();
-		menu->getOpcion(posicion)->leerOperandos();
-		menu->getOpcion(posicion)->mostrarResultado();
-		apagado = true;
+		Entero posicion = menu->leerPosicion();
+		menu->getOpcion(posicion)->ejecutar();
 	}
 }
 
